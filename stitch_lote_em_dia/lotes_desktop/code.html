@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-tertiary-fixed":"#370e00","surface-container-lowest":"#ffffff","surface-container-high":"#dce9ff","surface-dim":"#cbdbf5","error":"#ba1a1a","on-secondary-fixed-variant":"#3f465c","on-tertiary-container":"#fffbff","error-container":"#ffdad6","on-error":"#ffffff","on-secondary":"#ffffff","on-primary-fixed":"#002109","tertiary":"#a33900","on-primary":"#ffffff","inverse-surface":"#213145","tertiary-fixed-dim":"#ffb599","secondary-fixed-dim":"#bec6e0","primary":"#006b2c","secondary-fixed":"#dae2fd","tertiary-fixed":"#ffdbce","surface-container-highest":"#d3e4fe","tertiary-container":"#cc4900","on-tertiary":"#ffffff","on-primary-fixed-variant":"#005320","inverse-primary":"#62df7d","on-surface":"#0b1c30","primary-fixed-dim":"#62df7d","on-secondary-fixed":"#131b2e","on-background":"#0b1c30","secondary":"#565e74","surface-container-low":"#eff4ff","on-primary-container":"#f7fff2","background":"#f8f9ff","secondary-container":"#dae2fd","on-error-container":"#93000a","on-surface-variant":"#3e4a3d","surface-variant":"#d3e4fe","surface-container":"#e5eeff","primary-container":"#00873a","surface-tint":"#006e2d","primary-fixed":"#7ffc97","surface-bright":"#f8f9ff","on-tertiary-fixed-variant":"#7f2b00","inverse-on-surface":"#eaf1ff","on-secondary-container":"#5c647a","outline-variant":"#bdcaba","outline":"#6e7b6c","surface":"#f8f9ff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","gutter":"1rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem","space-xl":"2rem","margin":"1rem"},fontFamily:{"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"label-sm":["Inter"],"headline-md":["Plus Jakarta Sans"],"body-lg":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Inter"],"numeric-metric":["Plus Jakarta Sans"],"label-md":["Inter"],"body-md":["Inter"],"label-lg":["Inter"]},fontSize:{"headline-lg":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"headline-sm":["18px",{lineHeight:"24px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"700"}],"headline-md":["20px",{lineHeight:"28px",letterSpacing:"-0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"display-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"numeric-metric":["28px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col"><div class="px-space-md pb-space-lg flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[24px]">verified</span></div><div><div class="font-headline-sm text-headline-sm text-on-surface">Lote em Dia</div><span class="font-label-sm text-label-sm text-primary">Controle Inteligente</span></div></div><div class="px-space-md mb-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Menu Operacional</span></div><nav class="flex flex-col gap-space-xs px-space-sm" data-active-classes="bg-primary text-on-primary font-label-lg rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="visao-geral" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Visão Geral</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary text-on-primary font-label-lg rounded-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="lotes" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span>Lotes</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="produtos" href="#"><span class="material-symbols-outlined text-[20px]">local_offer</span><span>Produtos</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container hover:text-on-surface transition-all" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Configurações</span></a></nav></div><div class="px-space-md pt-space-md"><div class="bg-surface-container-low rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">cloud_done</span><span class="font-label-sm text-label-sm text-on-surface-variant">Sincronizado</span></div><span class="font-body-sm text-body-sm text-secondary">Agora</span></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-primary text-[20px]">storefront</span><span class="font-label-lg text-label-lg text-on-surface">Empório Natural Grão &amp; Cia</span></div><div class="relative flex items-center"><span class="material-symbols-outlined text-secondary text-[20px] absolute left-space-sm pointer-events-none">search</span><input class="bg-surface-container-low text-on-surface placeholder:text-secondary font-body-sm text-body-sm pl-9 pr-space-md py-space-xs rounded-lg w-80 outline-none focus:bg-surface-container focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar lote, código de barras ou produto..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-primary text-[18px]">sync</span><span class="font-label-sm text-label-sm text-on-surface-variant">Online</span></div><button class="relative p-space-xs rounded-lg text-secondary hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden sm:block"><div class="font-label-md text-label-md text-on-surface">Mariana Silva</div><div class="font-body-sm text-body-sm text-secondary">Operador de Balcão</div></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-background min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- Topo da Página & Métricas Táticas -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Controle de Estoque • Balcão Operacional</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gerenciamento de Lotes</h1>
+<p class="font-body-md text-body-md text-secondary mt-1">Consulte, monitore e registre movimentações de todos os lotes ativos na loja</p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg rounded-lg shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary">file_download</span>
+<span>Exportar CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-md hover:shadow-lg transition-all" id="btn-novo-lote" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Adicionar Lote</span>
+</button>
+</div>
+</div>
+<!-- Cards de Visão Geral / PVPS Quick Stats -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Total em Estoque</span>
+<div class="font-numeric-metric text-numeric-metric text-on-surface mt-1">30 <span class="font-body-sm text-body-sm text-secondary font-normal">itens</span></div>
+<div class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 4 lotes auditados
+        </div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">shelves</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Atenção Crítica</span>
+<div class="font-numeric-metric text-numeric-metric text-error mt-1">1 <span class="font-body-sm text-body-sm text-error font-normal">vencido</span></div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span> Bloqueado p/ venda
+        </div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[26px]">event_busy</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">A Vencer (≤ 7 dias)</span>
+<div class="font-numeric-metric text-numeric-metric text-tertiary mt-1">1 <span class="font-body-sm text-body-sm text-tertiary font-normal">lote</span></div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary">priority_high</span> Ação promocional sugerida
+        </div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[26px]">alarm</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Conformidade Geral</span>
+<div class="font-numeric-metric text-numeric-metric text-primary mt-1">75%</div>
+<div class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span> Diretriz PVPS ativa
+        </div>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+</div>
+</div>
+<!-- Barra de Filtros Avançados & Busca -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<!-- Linha Superior de Filtros: Busca + Dropdowns + Ações -->
+<div class="flex flex-col lg:flex-row gap-space-md lg:items-center justify-between">
+<div class="relative flex-1">
+<span class="material-symbols-outlined text-secondary text-[22px] absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low text-on-surface placeholder:text-secondary font-body-md text-body-md pl-10 pr-space-md py-space-sm rounded-lg outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all h-12" id="input-busca" placeholder="Buscar por produto, marca ou código do lote (ex: GT-104)..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Dropdown Categoria -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md pl-space-md pr-9 py-space-sm rounded-lg outline-none cursor-pointer h-12 transition-all" id="filtro-categoria">
+<option value="">Categoria: Todas as categorias</option>
+<option value="Castanhas">Castanhas</option>
+<option value="Granolas">Granolas</option>
+<option value="Farinhas">Farinhas</option>
+<option value="Chás">Chás</option>
+</select>
+<span class="material-symbols-outlined text-secondary text-[20px] absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">expand_more</span>
+</div>
+<!-- Dropdown Ordenação -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md pl-space-md pr-9 py-space-sm rounded-lg outline-none cursor-pointer h-12 transition-all" id="filtro-ordenacao">
+<option value="validade_urgente">Ordenar por: Validade mais urgente</option>
+<option value="validade_distante">Ordenar por: Validade mais distante</option>
+<option value="saldo_menor">Ordenar por: Menor quantidade</option>
+<option value="saldo_maior">Ordenar por: Maior quantidade</option>
+<option value="codigo_alfabetico">Ordenar por: Código (A-Z)</option>
+</select>
+<span class="material-symbols-outlined text-secondary text-[20px] absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none">swap_vert</span>
+</div>
+<!-- Botão Limpar Filtros -->
+<button class="flex items-center gap-1 text-secondary hover:text-on-surface font-label-md text-label-md px-space-sm py-space-sm rounded-lg hover:bg-surface-container-low transition-colors h-12" id="btn-limpar-filtros" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_alt_off</span>
+<span>Limpar filtros</span>
+</button>
+</div>
+</div>
+<!-- Linha Inferior: Chips / Tabs de Situação -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 scrollbar-none">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mr-2 hidden sm:inline">Situação:</span>
+<!-- Tab Todos -->
+<button class="filter-chip active-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all" data-filter="todos" type="button">
+<span>Todos</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-white/20 font-bold">4</span>
+</button>
+<!-- Tab Vencidos -->
+<button class="filter-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-error-container/30 transition-all" data-filter="vencido" type="button">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Vencidos</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-error-container text-on-error-container font-bold">1</span>
+</button>
+<!-- Tab Até 7 dias -->
+<button class="filter-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-tertiary-fixed/50 transition-all" data-filter="critico" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Até 7 dias</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-tertiary-fixed text-on-tertiary-fixed-variant font-bold">1</span>
+</button>
+<!-- Tab Até 30 dias -->
+<button class="filter-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-all" data-filter="alerta" type="button">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Até 30 dias</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-secondary-fixed text-on-secondary-fixed-variant font-bold">1</span>
+</button>
+<!-- Tab Em dia -->
+<button class="filter-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-on-surface hover:bg-primary-fixed/40 transition-all" data-filter="regular" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Em dia</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-primary-fixed text-on-primary-fixed-variant font-bold">1</span>
+</button>
+<!-- Tab Sem estoque -->
+<button class="filter-chip flex items-center gap-2 px-space-md py-space-xs rounded-lg font-label-md text-label-md bg-surface-container-low text-secondary opacity-60 hover:opacity-100 transition-all" data-filter="esgotado" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Sem estoque</span>
+<span class="inline-flex items-center justify-center px-1.5 py-0.5 rounded-full text-[10px] bg-surface-container font-bold">0</span>
+</button>
+</div>
+</div>
+<!-- Tabela Rica de Lotes (Desktop Data Table) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Header de Ações em Massa (Aparece dinamicamente ou sutil) -->
+<div class="hidden px-space-md py-space-sm bg-secondary-container text-on-secondary-fixed flex items-center justify-between" id="bulk-toolbar">
+<div class="flex items-center gap-space-sm font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px] text-primary">check_box</span>
+<span id="bulk-count">0 lotes selecionados</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface-container rounded font-label-sm text-label-sm text-error flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">delete_sweep</span> Baixa em Lote
+        </button>
+<button class="px-space-sm py-1 bg-surface-container-lowest hover:bg-surface-container rounded font-label-sm text-label-sm text-on-surface flex items-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span> Imprimir Etiquetas PVPS
+        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md w-12 text-center">
+<input class="w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" id="check-all" type="checkbox"/>
+</th>
+<th class="py-3 px-space-md">Produto &amp; Código</th>
+<th class="py-3 px-space-md">Categoria</th>
+<th class="py-3 px-space-md">Localização / Fornecedor</th>
+<th class="py-3 px-space-md">Saldo Disponível</th>
+<th class="py-3 px-space-md">Data de Validade</th>
+<th class="py-3 px-space-md">Situação</th>
+<th class="py-3 px-space-md text-right">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y-0" id="tabela-lotes-body">
+<!-- Linha 1: Vencido (Farinha de Mandioca) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group relative" data-category="Farinhas" data-row-status="vencido">
+<td class="py-space-md px-space-md text-center align-middle relative">
+<span class="absolute left-0 top-0 bottom-0 w-1 bg-error"></span>
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Embalagem artesanal de farinha de mandioca torrada gourmet em saco kraft com visor transparente e etiqueta minimalista em iluminação de estúdio suave para loja de empório natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJww20faKRb2D-FPjSvJqYQBPamQUSEsmG_df3ZLwz5sFOTmeVmvgYHRSgvKVbt6egSSwMgeR9A2ho096qskCPvpxiAau9lEPvWKPi0xuDBzFfHbcPwdJkeHhnvk8P_iD0LaVfNJRa7Tl9WNm3MYfcZBUjKO-fRRDoTdS7S_LimLBg1a9aIuP6YR1lwkhjDalrgC8T87eRXO-60ZzKLSNyOsxXCvyrZmYKmTUpbxI"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Farinha de Mandioca Torrada</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-body-sm font-semibold text-secondary bg-surface-container px-1.5 py-0.5 rounded">#FM-089</span>
+<span class="font-body-sm text-body-sm text-secondary">EAN: 7898302019401</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded-full">Farinhas</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Grãos do Brasil</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">warehouse</span> Prateleira A1
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface">
+<span class="font-bold">4 pacotes</span>
+<span class="font-body-sm text-body-sm text-secondary">de 10</span>
+</div>
+<!-- Barra de progresso -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full transition-all" style="width: 40%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">40% restante no lote</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-error font-bold">18/10/2026</span>
+<span class="font-body-sm text-body-sm text-secondary">Entrada: 10/01/2026</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">error</span>
+<span>Vencido (há 6 dias)</span>
+</span>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 bg-error/10 hover:bg-error/20 text-error font-label-md text-label-md rounded-lg flex items-center gap-1 transition-all" title="Registrar Descarte ou Devolução" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Registrar Saída</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Editar Informações do Lote" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Mais Opções" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 2: Vence em 4 dias (Granola Artesanal) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group relative bg-surface-container-low/20" data-category="Granolas" data-row-status="critico">
+<td class="py-space-md px-space-md text-center align-middle relative">
+<span class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></span>
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Pote transparente de vidro contendo granola artesanal tostada com sementes e mel, rótulo moderno com estética rústica e iluminação quente de empório." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7zv7RT-dsv2m6nsZe9WchnTMvsKtxc-ki9RfVrgxPOQs6m6HTUmLhMg5oV7D3wRssigW89WdwQR9Po1HgsqnVOw335NxNC4bw7XpRn7rOKMNVZJxp6tzqihUzz5KVT1DRrq9zXsB39mqcdAM496onhcj4_uqZaV9KmQIh7cZEweEPVU3GYuz0LPRnjKGO3ap3XKuZ-Rzw_grDHByQuMIDPh7btcw5wPvm0ZbZWKc"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Granola Tradicional Artesanal</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-body-sm font-semibold text-secondary bg-surface-container px-1.5 py-0.5 rounded">#GT-104</span>
+<span class="font-body-sm text-body-sm text-secondary">EAN: 7898104502012</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded-full">Granolas</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Grão Real</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">warehouse</span> Prateleira B2
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface">
+<span class="font-bold">8 pacotes</span>
+<span class="font-body-sm text-body-sm text-secondary">de 15</span>
+</div>
+<!-- Barra de progresso -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full transition-all" style="width: 53%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">53% restante no lote</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-tertiary font-bold">28/10/2026</span>
+<span class="font-body-sm text-body-sm text-secondary">Entrada: 05/02/2026</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Vence em 4 dias</span>
+</span>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-all" title="Registrar Saída no Caixa" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Registrar Saída</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Editar Informações do Lote" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Mais Opções" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 3: Vence em 22 dias (Castanha de Caju) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group relative" data-category="Castanhas" data-row-status="alerta">
+<td class="py-space-md px-space-md text-center align-middle relative">
+<span class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></span>
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Castanhas de caju selecionadas tipo W1 torradas em saco a vácuo transparente, grãos dourados perfeitos com fundo neutro de madeira clara de armazém natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCM4SgRpaVFaYB5bFjteGy57rgKjejI3wNKYRd-OlAvHYyUSY9hoLSPpZV_JApOBR_8X_4ibqPmYxFtp0mAQZeMg36ASCZmne2gfsKwtriN1Fcm1nCkTMCBMa-ndyqLM_UCdYxOOpayeubzPvLUgYCMUCd33mMcXu5cJwH63EW94fAZhJqXE1_x9ySgGhqoNYxQJxAguhAutqQpbhPM956Gq4Rjg83fYra-v6Ko1o"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Castanha de Caju W1</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-body-sm font-semibold text-secondary bg-surface-container px-1.5 py-0.5 rounded">#CC-302</span>
+<span class="font-body-sm text-body-sm text-secondary">EAN: 7897210984411</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded-full">Castanhas</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Castanhas do Norte</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">warehouse</span> Prateleira C3
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface">
+<span class="font-bold">12 pacotes</span>
+<span class="font-body-sm text-body-sm text-secondary">de 20</span>
+</div>
+<!-- Barra de progresso -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full transition-all" style="width: 60%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">60% restante no lote</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">15/11/2026</span>
+<span class="font-body-sm text-body-sm text-secondary">Entrada: 12/03/2026</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Vence em 22 dias</span>
+</span>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-all" title="Registrar Saída no Caixa" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Registrar Saída</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Editar Informações do Lote" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Mais Opções" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Linha 4: Em dia (Chá de Camomila Orgânico) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group relative" data-category="Chás" data-row-status="regular">
+<td class="py-space-md px-space-md text-center align-middle relative">
+<span class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></span>
+<input class="row-checkbox w-4 h-4 rounded text-primary focus:ring-primary cursor-pointer accent-primary" type="checkbox"/>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Caixa cilíndrica de infusão botânica de camomila orgânica desidratada com flores amarelas aparentes, embalagem ecológica em ambiente bem iluminado." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFOuEPsmbtyCBcWkGV7gxiHAySxn43MZ3uOhyrtgolI8rQN2ZbpdfMhhKUXa0oHeREvjR72fCum-eo8d5jOVtveBiAWgEitEE3bC94zOO3-yyOPcyHqP5sHRqAqhP21HJgvmESWanLjznrIEllB3flTWjOhdrSQGfpa3XdrkQa7Z6zVVfvSYUZ_OTS-M7F1ePp1cQPQP54KMiNx_GH8t2Ki0Ju64qCH82FUMot1GU"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-bold group-hover:text-primary transition-colors">Chá de Camomila Orgânico</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-body-sm text-body-sm font-semibold text-secondary bg-surface-container px-1.5 py-0.5 rounded">#CH-501</span>
+<span class="font-body-sm text-body-sm text-secondary">EAN: 7896432109876</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-low px-space-sm py-1 rounded-full">Chás</span>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-medium">Ervas &amp; Vida</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">warehouse</span> Prateleira D1
+                </span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center font-label-md text-label-md text-on-surface">
+<span class="font-bold">6 unidades</span>
+<span class="font-body-sm text-body-sm text-secondary">de 10</span>
+</div>
+<!-- Barra de progresso -->
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 60%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">60% restante no lote</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-primary font-bold">15/05/2027</span>
+<span class="font-body-sm text-body-sm text-secondary">Entrada: 01/04/2026</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-middle">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-lg bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Em dia (&gt; 30 dias)</span>
+</span>
+</td>
+<td class="py-space-md px-space-md align-middle text-right">
+<div class="flex items-center justify-end gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg flex items-center gap-1 transition-all" title="Registrar Saída no Caixa" type="button">
+<span class="material-symbols-outlined text-[18px]">output</span>
+<span>Registrar Saída</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Editar Informações do Lote" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" title="Mais Opções" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Rodapé da Tabela: Paginação Desktop & Seletor de Registros -->
+<div class="p-space-md bg-surface-container-low flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-secondary">
+<span>Mostrando <strong class="text-on-surface font-semibold" id="table-record-count">4</strong> de <strong class="text-on-surface font-semibold">4</strong> lotes cadastrados</span>
+<div class="flex items-center gap-space-xs">
+<span>Itens por página:</span>
+<select class="bg-surface-container-lowest text-on-surface rounded px-space-xs py-1 font-label-sm text-label-sm outline-none cursor-pointer">
+<option selected="" value="10">10</option>
+<option value="25">25</option>
+<option value="50">50</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-center">
+<button class="p-1.5 rounded-lg text-secondary opacity-40 cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">first_page</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary opacity-40 cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<span class="px-space-md py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded-lg shadow-sm">1</span>
+<button class="p-1.5 rounded-lg text-secondary opacity-40 cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded-lg text-secondary opacity-40 cursor-not-allowed flex items-center justify-center" disabled="" type="button">
+<span class="material-symbols-outlined text-[20px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Banner Informativo: Diretriz Operacional PVPS & Legenda das Situações -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Banner PVPS -->
+<div class="lg:col-span-2 bg-gradient-to-r from-surface-container to-surface-container-low rounded-xl p-space-md shadow-sm flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[26px]">rotate_right</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Regra Operacional PVPS (FEFO)</h2>
+<span class="bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">Padrão Ativo</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+<strong>Primeiro que Vence, Primeiro que Sai:</strong> Lotes com prazos mais próximos devem ser posicionados à frente na gôndola e priorizados nas separações para entrega. Em caso de lotes vencidos, realize a baixa imediata como descarte para evitar inconsistência fiscal.
+        </p>
+</div>
+</div>
+<!-- Legenda Rápida de Status -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-xs">Legenda de Risco no Balcão</span>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="text-on-surface font-medium">Vencido</span>
+</div>
+<span class="text-secondary">Bloqueio total / Descarte</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="text-on-surface font-medium">Até 7 dias</span>
+</div>
+<span class="text-secondary">Ponta de gôndola / Queima</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="text-on-surface font-medium">Até 30 dias</span>
+</div>
+<span class="text-secondary">Monitoramento semanal</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="text-on-surface font-medium">Em dia (&gt; 30 dias)</span>
+</div>
+<span class="text-secondary">Estoque saudável</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal / Gaveta Lateral de Adicionar Lote (Mock Interativo Desencadeado por Botão) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden flex items-center justify-center p-4" id="modal-adicionar-lote">
+<div class="bg-surface-container-lowest w-full max-w-lg rounded-2xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<div class="p-space-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[20px]">add_task</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Novo Lote de Mercadoria</h3>
+<span class="font-body-sm text-body-sm text-secondary">Registro com código identificador e validade</span>
+</div>
+</div>
+<button class="text-secondary hover:text-on-surface p-1 rounded-lg hover:bg-surface-container transition-colors" id="btn-fechar-modal" type="button">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<form class="p-space-lg flex flex-col gap-space-md" id="form-novo-lote">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Produto Cadastrado</label>
+<select class="w-full bg-surface-container-low font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all">
+<option>Selecione um produto cadastrado...</option>
+<option>Farinha de Mandioca Torrada</option>
+<option>Granola Tradicional Artesanal</option>
+<option>Castanha de Caju W1</option>
+<option>Chá de Camomila Orgânico</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Código do Lote</label>
+<input class="w-full bg-surface-container-low font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" placeholder="Ex: LT-902" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Quantidade Recebida</label>
+<input class="w-full bg-surface-container-low font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" placeholder="Ex: 20" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Data de Validade</label>
+<input class="w-full bg-surface-container-low font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" type="date"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1">Localização em Loja</label>
+<input class="w-full bg-surface-container-low font-body-md text-body-md rounded-lg px-space-md py-space-sm outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary transition-all" placeholder="Ex: Prateleira B1" type="text"/>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm mt-space-sm pt-space-md">
+<button class="px-space-md py-space-sm text-secondary hover:text-on-surface font-label-lg text-label-lg rounded-lg hover:bg-surface-container transition-colors" id="btn-cancelar-modal" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg py-space-sm bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-lg shadow-sm transition-all flex items-center gap-1.5" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Salvar Lote</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    // Interações de Filtros e Chips
+    const chips = document.querySelectorAll('.filter-chip');
+    const rows = document.querySelectorAll('#tabela-lotes-body tr');
+    const searchInput = document.getElementById('input-busca');
+    const categorySelect = document.getElementById('filtro-categoria');
+    const clearBtn = document.getElementById('btn-limpar-filtros');
+    const countDisplay = document.getElementById('table-record-count');
+
+    let currentFilter = 'todos';
+
+    function applyFilters() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      const selectedCategory = categorySelect.value;
+      let visibleCount = 0;
+
+      rows.forEach(row => {
+        const rowStatus = row.getAttribute('data-row-status');
+        const rowCategory = row.getAttribute('data-category');
+        const textContent = row.textContent.toLowerCase();
+
+        const matchStatus = (currentFilter === 'todos') || (rowStatus === currentFilter);
+        const matchCategory = !selectedCategory || (rowCategory === selectedCategory);
+        const matchSearch = !query || textContent.includes(query);
+
+        if (matchStatus && matchCategory && matchSearch) {
+          row.style.display = '';
+          visibleCount++;
+        } else {
+          row.style.display = 'none';
+        }
+      });
+
+      if (countDisplay) {
+        countDisplay.textContent = visibleCount;
+      }
+    }
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          if (!c.classList.contains('bg-surface-container-low')) {
+            c.classList.add('bg-surface-container-low', 'text-on-surface');
+          }
+        });
+
+        chip.classList.remove('bg-surface-container-low', 'text-on-surface');
+        chip.classList.add('bg-primary', 'text-on-primary');
+
+        currentFilter = chip.getAttribute('data-filter');
+        applyFilters();
+      });
+    });
+
+    if (searchInput) searchInput.addEventListener('input', applyFilters);
+    if (categorySelect) categorySelect.addEventListener('change', applyFilters);
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (categorySelect) categorySelect.value = '';
+        currentFilter = 'todos';
+
+        chips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary');
+          c.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        const firstChip = document.querySelector('[data-filter="todos"]');
+        if (firstChip) {
+          firstChip.classList.remove('bg-surface-container-low', 'text-on-surface');
+          firstChip.classList.add('bg-primary', 'text-on-primary');
+        }
+
+        applyFilters();
+      });
+    }
+
+    // Seleção múltipla de linhas
+    const checkAll = document.getElementById('check-all');
+    const rowCheckboxes = document.querySelectorAll('.row-checkbox');
+    const bulkToolbar = document.getElementById('bulk-toolbar');
+    const bulkCount = document.getElementById('bulk-count');
+
+    function updateBulkState() {
+      const checkedBoxes = document.querySelectorAll('.row-checkbox:checked');
+      const count = checkedBoxes.length;
+
+      if (count > 0) {
+        bulkToolbar.classList.remove('hidden');
+        bulkCount.textContent = `${count} lote${count > 1 ? 's selecionados' : ' selecionado'}`;
+      } else {
+        bulkToolbar.classList.add('hidden');
+      }
+
+      if (checkAll) {
+        checkAll.checked = count === rowCheckboxes.length && rowCheckboxes.length > 0;
+      }
+    }
+
+    if (checkAll) {
+      checkAll.addEventListener('change', () => {
+        rowCheckboxes.forEach(cb => {
+          const row = cb.closest('tr');
+          if (row.style.display !== 'none') {
+            cb.checked = checkAll.checked;
+          }
+        });
+        updateBulkState();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', updateBulkState);
+    });
+
+    // Modal simples de Adicionar Lote
+    const modal = document.getElementById('modal-adicionar-lote');
+    const openModalBtn = document.getElementById('btn-novo-lote');
+    const closeModalBtn = document.getElementById('btn-fechar-modal');
+    const cancelModalBtn = document.getElementById('btn-cancelar-modal');
+
+    function openModal() {
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      if (modal) modal.classList.add('hidden');
+    }
+
+    if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+    if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+    if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+  })();
+</script></main></div></body></html>
